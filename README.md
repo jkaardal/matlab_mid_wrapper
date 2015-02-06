@@ -9,7 +9,10 @@ Contained in this README is information on how to install and use the MATLAB
 Maximally Informative Dimensions (MID) code wrapper. This is called a
 "wrapper" because the MID code itself is written in C with parameter values
 defined in XML. This wrapper allows users more familiar with MATLAB to use
-the MID code without having to touch the raw MID code.
+the MID code without having to touch the raw MID code. MID is a method for
+characterizing receptive fields of neurons responding to stimuli including 
+naturalistic stimuli. To find out more, see 
+https://www.princeton.edu/~wbialek/rome/refs/sharpee+al_04.pdf.
 
 
 ------------------------------------------------------------------------------
