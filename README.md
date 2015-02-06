@@ -1,4 +1,4 @@
-# mid_matlab_wrapper
+# matlab_mid_wrapper
 Maximally Informative Dimensions wrapper in MATLAB
 
 ------------------------------------------------------------------------------
