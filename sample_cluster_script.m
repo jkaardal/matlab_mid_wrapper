@@ -18,7 +18,7 @@ stim_properties = struct( ...
 
 % Loop submits the response of all cells with id 1 through 7 to the loaded
 % stimuli.
-Ntrials = 0;      % Number of response bins (should equal the number of stimuli)
+Ntrials = 0;      % Number of response bins (should equal the number of stimuli); assign 0 to determine automatically.
 Nlags = 3;        % Number of stimuli relevant to each spike
 skipFrames = 0;   % Number of frames to skip to line up spikes with stimuli
 Nparts = 4;       % Number of training sets/test sets to split the data into (4 is recommended)
