@@ -18,7 +18,7 @@ stim_properties = struct( ...
 
 % Response format: text file with a list of the number of spikes per bin
 respname = './mid-demo/11101_1.isk';
-Ntrials = 0;      % Number of response bins (should equal the number of stimuli)
+Ntrials = 0;      % Number of response bins (should equal the number of stimuli); assign 0 to determine automatically.
 Nlags = 3;        % Number of stimuli relevant to each spike
 skipFrames = 0;   % Number of frames to skip to line up spikes with stimuli
 part = 1;         % Portion of stimuli/responses to fit up to fit_options.Nparts(= 4 usually)
