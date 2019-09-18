@@ -1,12 +1,14 @@
 %% EASY INSTALL
 
-cd mid/mid/mxml-2.6/
+origin = pwd;
+mxml = [origin, '/mid/mid/mxml-2.6/'];
 
-system('make', '-echo');
-system('make install', '-echo');
-cd ../..
+system(['cd ', mxml, '; make'], '-echo');
+system(['cd ', mxml, '; make install'], '-echo');
 
-cd mid
+mid = [origin, '/mid/mid/'];
+
+cd mid/mid
 
 % necessary to remove flag -fstrict (to be fixed in the future)
 fid = fopen('Makefile', 'rt');
@@ -23,15 +25,15 @@ end
 fclose(fid);
 fclose(fid2);
 
-system('rm Makefile', '-echo');
-system('cp tempmake Makefile', '-echo');
-system('rm tempmake', '-echo');
+system(['cd ', mid, '; rm Makefile'], '-echo');
+system(['cd ', mid, '; cp tempmake Makefile'], '-echo');
+system(['cd ', mid, '; rm tempmake'], '-echo');
 
-system('make', '-echo');
-system('make clean', '-echo');
+system(['cd ', mid, '; make'], '-echo');
+system(['cd ', mid, '; make clean'], '-echo');
 
-cd ../..
+cd(origin)
 
-system('mkdir Results');
-system('mkdir XMLparams');
-system('mkdir shell_scripts');
+system(['cd ', origin, '; mkdir Results']);
+system(['cd ', origin, '; mkdir XMLparams']);
+system(['cd ', origin, '; mkdir shell_scripts']);
