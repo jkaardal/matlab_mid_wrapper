@@ -1,13 +1,14 @@
 %% EASY DOWNLOAD
 
-system('git clone git://github.com/sharpee/mid.git mid', '-echo');
+origin = pwd;
+system(['cd ',origin,'; git clone git://github.com/sharpee/mid.git mid'], '-echo');
 
 % remove this line if you do not want demo
-system('git clone git://github.com/sharpee/mid-demo.git mid-demo', '-echo');
+system(['cd ', origin, '; git clone git://github.com/sharpee/mid-demo.git mid-demo'], '-echo');
 
-cd mid
-system('git submodule init', '-echo');
-system('git submodule update', '-echo');
-cd mid/mxml-2.6
-system('./configure --prefix="$PWD"', '-echo');
-cd ../../..
+middir = [origin,'/mid'];
+system(['cd ', middir, '; git submodule init'], '-echo');
+system(['cd ', middir, '; git submodule update'], '-echo');
+mxml = [origin,'/mid/mid/mxml-2.6'];
+system(['cd ', mxml,'; ./configure --prefix="$PWD"'], '-echo');
+
